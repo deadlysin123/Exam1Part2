@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSnackbar?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="gridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="344.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="5.0" prefHeight="10.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints fillHeight="false" maxHeight="121.0" minHeight="4.0" prefHeight="36.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="427.0" minHeight="10.0" prefHeight="395.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <HBox prefHeight="42.0" prefWidth="389.0" GridPane.rowIndex="1">
+         <children>
+            <VBox prefHeight="98.0" prefWidth="197.0" style="-fx-background-color: lime;">
+               <children>
+                  <JFXTextField fx:id="minValue" focusColor="WHITE" promptText="Enter Min Value" style="-fx-border-color: red;" />
+                  <JFXTextField fx:id="maxValue" focusColor="WHITE" promptText="Enter Max Value" style="-fx-border-color: red;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="185.0" prefWidth="199.0">
+               <children>
+                  <JFXButton fx:id="runResult" alignment="CENTER" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: silver; -fx-border-color: red;" text="RUN" />
+                  <JFXButton fx:id="loadData" alignment="BOTTOM_CENTER" prefHeight="25.0" prefWidth="195.0" style="-fx-background-color: silver; -fx-border-color: red;" text="LOAD NUMBER" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="389.0" text="RANDOM NUMBER GENERATOR" textFill="RED">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+         <children>
+            <Label fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="426.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <JFXListView fx:id="resultListView" prefHeight="384.0" prefWidth="389.0" />
+            <JFXSnackbar fx:id="notificationBar" />
+         </children>
+      </VBox>
+   </children>
+</GridPane>
